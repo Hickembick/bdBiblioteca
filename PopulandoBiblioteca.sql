@@ -1,4 +1,4 @@
--- Inserir dados na tabela Editora
+-- Inserir mais dados na tabela Editora
 INSERT INTO Editora (Nome, Endereco, Telefone)
 VALUES
   ('Editora ABC', 'Rua das Flores, 789', '419876543210'),
@@ -9,7 +9,7 @@ VALUES
   ('Editora Fantasia', 'Avenida dos Sonhos, 234', '414321098765'),
   ('Editora Páginas', 'Rua do Conhecimento, 567', '413210987654');
 
--- Inserir dados na tabela Livro
+-- Inserir mais dados na tabela Livro
 INSERT INTO Livro (ISBN, Titulo, AnoPublicacao, Genero, Quantidade, EditoraID)
 VALUES
   ('978-1111111111', 'A Viagem Misteriosa', 2022, 'Aventura', 10, 2),
@@ -20,7 +20,7 @@ VALUES
   ('978-6666666666', 'Aventuras Espaciais', 2022, 'Ficção Científica', 9, 3),
   ('978-7777777777', 'Histórias do Passado', 2018, 'História', 6, 7);
 
--- Inserir dados na tabela Autor
+-- Inserir mais dados na tabela Autor
 INSERT INTO Autor (ID, Nome, DataNasc, Nacionalidade, Biografia)
 VALUES
   (7, 'Autor G', '1980-09-10', 'Brasileiro', 'Autor G é um talentoso escritor...'),
@@ -31,7 +31,7 @@ VALUES
   (12, 'Autor L', '1983-06-28', 'Alemão', 'Autor L traz histórias cativantes...'),
   (13, 'Autor M', '1990-01-05', 'Italiano', 'Autor M é um contador de histórias...');
 
--- Inserir dados na tabela EscritoPor
+-- Inserir mais dados na tabela EscritoPor
 INSERT INTO EscritoPor (LivroISBN, AutorID)
 VALUES
   ('978-1111111111', 7),
@@ -42,7 +42,7 @@ VALUES
   ('978-6666666666', 12),
   ('978-7777777777', 13);
 
--- Inserir dados na tabela Emprestimo
+-- Inserir mais dados na tabela Emprestimo
 INSERT INTO Emprestimo (LivroISBN, DataEmprestimo, DataDevolucao)
 VALUES
   ('978-1111111111', '2023-08-15', '2023-08-30'),

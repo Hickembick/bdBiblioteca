@@ -1,7 +1,10 @@
+-- Criação do banco de dados "jessibibli"
 CREATE DATABASE jessibibli;
 
+-- Seleciona o banco de dados recém-criado
 USE jessibibli;
 
+-- Tabela 'Editora': Armazena informações sobre editoras
 CREATE TABLE `Editora` (
   `ID` INT PRIMARY KEY AUTO_INCREMENT,
   `Nome` VARCHAR(100) NOT NULL,
@@ -9,6 +12,7 @@ CREATE TABLE `Editora` (
   `Telefone` VARCHAR(20)
 );
 
+-- Tabela 'Livro': Armazena informações sobre livros
 CREATE TABLE `Livro` (
   `ISBN` VARCHAR(13) PRIMARY KEY,
   `Titulo` VARCHAR(200) NOT NULL,
@@ -19,6 +23,7 @@ CREATE TABLE `Livro` (
   FOREIGN KEY (`EditoraID`) REFERENCES `Editora` (`ID`)
 );
 
+-- Tabela 'Autor': Armazena informações sobre autores
 CREATE TABLE `Autor` (
   `ID` INT PRIMARY KEY,
   `Nome` VARCHAR(100) NOT NULL,
@@ -27,6 +32,7 @@ CREATE TABLE `Autor` (
   `Biografia` TEXT
 );
 
+-- Tabela 'EscritoPor': Associa autores a livros (relação muitos-para-muitos)
 CREATE TABLE `EscritoPor` (
   `LivroISBN` VARCHAR(13),
   `AutorID` INT,
@@ -35,6 +41,7 @@ CREATE TABLE `EscritoPor` (
   FOREIGN KEY (`AutorID`) REFERENCES `Autor` (`ID`)
 );
 
+-- Tabela 'Emprestimo': Armazena informações sobre empréstimos de livros
 CREATE TABLE `Emprestimo` (
   `ID` INT PRIMARY KEY AUTO_INCREMENT,
   `LivroISBN` VARCHAR(13),
